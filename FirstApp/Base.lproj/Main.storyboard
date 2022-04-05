@@ -16,8 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PUSHテスト" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t08-eE-2B6">
-                                <rect key="frame" x="158" y="244" width="98" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJ7-Bg-FfF">
+                                <rect key="frame" x="174" y="219" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="touchedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x2V-Og-cf5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイトル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9k-Rg-O3G">
+                                <rect key="frame" x="172" y="104" width="70" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -26,10 +35,15 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="t08-eE-2B6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4aT-zu-Kw5"/>
-                            <constraint firstItem="t08-eE-2B6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="qLp-Ub-cWx"/>
+                            <constraint firstItem="z9k-Rg-O3G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X5A-LD-7k5"/>
+                            <constraint firstItem="z9k-Rg-O3G" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="Ymw-4o-041"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="titleButton" destination="IJ7-Bg-FfF" id="nyb-NS-qn1"/>
+                        <outlet property="titleLabel" destination="z9k-Rg-O3G" id="TZd-uh-3BP"/>
+                        <outlet property="touchedButton" destination="IJ7-Bg-FfF" id="dfs-o9-VyX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
